@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise MedLab</title>
+    <style>
+        :root {
+            --primary: #d3ad7f;
+            --secondary: #a17950;
+            --accent: #8c6b4a;
+            --light: #fdf3df;
+            --dark: #13131a;
+            --text: #444;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: rgba(253, 243, 223, 0.93);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid var(--primary);
+        }
+        
+        h1 {
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section-title {
+            color: var(--secondary);
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            padding-left: 15px;
+            border-left: 5px solid var(--primary);
+        }
+        
+        .positive .section-title {
+            color: #5a7247;
+        }
+        
+        .negative .section-title {
+            color: #8c4a4a;
+        }
+        
+        .inspiration .section-title {
+            color: #7a5a47;
+        }
+        
+        .point-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .point-list li {
+            padding: 12px 15px;
+            margin-bottom: 12px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 5px;
+            position: relative;
+            padding-left: 40px;
+            transition: transform 0.3s;
+        }
+        
+        .point-list li:hover {
+            transform: translateX(5px);
+        }
+        
+        .positive .point-list li::before {
+            content: "✓";
+            color: #5a7247;
+            font-weight: bold;
+            position: absolute;
+            left: 15px;
+        }
+        
+        .negative .point-list li::before {
+            content: "✗";
+            color: #8c4a4a;
+            font-weight: bold;
+            position: absolute;
+            left: 15px;
+        }
+        
+        .inspiration .point-list li::before {
+            content: "➤";
+            color: #7a5a47;
+            font-weight: bold;
+            position: absolute;
+            left: 15px;
+        }
+        
+        .highlight {
+            font-style: italic;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: rgba(210, 173, 127, 0.2);
+            border-left: 4px solid var(--primary);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .divider {
+            border-top: 1px dashed var(--primary);
+            margin: 40px 0;
+            opacity: 0.5;
+        }
+        
+        .back-button {
+            display: block;
+            width: 200px;
+            margin: 40px auto 0;
+            padding: 12px 20px;
+            background-color: var(--accent);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: 1px solid var(--secondary);
+        }
+        
+        .back-button:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+                margin: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.4rem;
+            }
+            
+            .back-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Análise MedLab</h1>
+        
+        <div class="positive">
+            <h2 class="section-title">Pontos Positivos</h2>
+            <ul class="point-list">
+                <li>Site muito bonito, cores bem feita, usual e bem tecnológico</li>
+                <li>Posts criativos seguem a sua paleta de cores</li>
+                <li>Criam conteúdo não apenas sobre prevenção do checkup mas também sobre gravidade de diversas doenças</li>
+                <li>Posts em carrossel</li>
+                <li>Posts sobre curiosidades</li>
+            </ul>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="inspiration">
+            <h2 class="section-title">Pontos a se Espelhar</h2>
+            <ul class="point-list">
+                <li>Seguir padrão de posts na paleta de cores</li>
+                <li>Mais posts em carrossel</li>
+                <li>Seguir periodicamente posts de produção de conteúdo acerca de doenças, alertando também dessa forma a necessidade de um check-up</li>
+            </ul>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="negative">
+            <h2 class="section-title">Pontos Negativos</h2>
+            <ul class="point-list">
+                <li>Apenas uma unidade</li>
+                <li>Poucos vídeos</li>
+                <li>Fraca presença orgânica e digital</li>
+            </ul>
+        </div>
+        
+        <a href="Index.html" class="back-button">Voltar para Início</a>
+    </div>
+</body>
+</html>

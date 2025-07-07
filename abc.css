@@ -1,0 +1,115 @@
+:root {
+  --market-color: #d3ad7f;
+  --black: #13131a;
+  --bg: #fdf3df;
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: #333;
+  line-height: 1.8;
+  font-size: 1.6rem;
+}
+
+section {
+  max-width: 900px;
+  margin: 5rem auto;
+  padding: 3rem;
+  background-color: #fffdf8;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  font-size: 3.5rem;
+  text-align: center;
+  color: var(--black);
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.title span {
+  color: var(--market-color);
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--market-color), #f8e1c4);
+  border-radius: 2px;
+}
+
+.content h3 {
+  font-size: 2rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.6rem;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 1.8rem;
+}
+
+.btn {
+  display: block; /* Mudar de inline-block para block */
+  text-align: center;
+  background: linear-gradient(135deg, var(--market-color), #e8c9a1);
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin: 3rem auto 0; /* O 'auto' nas laterais centraliza o elemento */
+  width: fit-content;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(210, 173, 127, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #c59a6b, #d8b58b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(210, 173, 127, 0.4);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  section {
+    margin: 3rem 1.5rem;
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 2.8rem;
+  }
+  
+  .content h3 {
+    font-size: 1.8rem;
+  }
+}

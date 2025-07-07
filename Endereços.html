@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades - Roseanne Dore Laboratórios</title>
+    <style>
+        :root {
+            --primary: #d3ad7f;
+            --secondary: #a17950;
+            --accent: #8c6b4a;
+            --light: #fdf3df;
+            --dark: #13131a;
+            --text: #444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            text-align: center;
+        }
+        
+        .units-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .unit-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .unit-name {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--primary);
+            padding-bottom: 8px;
+        }
+        
+        .unit-address {
+            line-height: 1.7;
+        }
+        
+        .btn {
+            display: block;
+            text-align: center;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin: 40px auto;
+            width: fit-content;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(210, 173, 127, 0.4);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .units-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Laboratórios Roseanne Dore</h1>
+            
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Nossas Unidades</h2>
+        
+        <div class="units-container">
+            <!-- Unidade Epitácio Pessoa -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Epitácio Pessoa</h3>
+                <div class="unit-address">
+                    <p>Avenida Presidente Epitácio Pessoa, 3360</p>
+                    <p>Tambauzinho, João Pessoa - PB</p>
+                </div>
+            </div>
+            
+            <!-- Unidade Geisel -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Geisel</h3>
+                <div class="unit-address">
+                    <p>Rua Valdemar Galdino Naziazeno, 1085</p>
+                    <p>Ernesto Geisel, João Pessoa - PB</p>
+                </div>
+            </div>
+            
+            <!-- Unidade Bairro dos Estados -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Bairro dos Estados</h3>
+                <div class="unit-address">
+                    <p>Rua Joaquim Pires Ferreira, 271</p>
+                    <p>Bairro dos Estados, João Pessoa - PB</p>
+                </div>
+            </div>
+            
+            <!-- Unidade Torre -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Torre</h3>
+                <div class="unit-address">
+                    <p>Avenida Nossa Senhora de Fátima, 1379</p>
+                    <p>Torre, João Pessoa - PB</p>
+                </div>
+            </div>
+            
+            <!-- Unidade Nova Diagnóstico -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Nova Diagnóstico</h3>
+                <div class="unit-address">
+                    <p>Avenida Presidente Epitácio Pessoa, 557</p>
+                    <p>Estados, João Pessoa - PB</p>
+                </div>
+            </div>
+            
+            <!-- Unidade Cristo -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Cristo</h3>
+                <div class="unit-address">
+                    <p>Av Ranieri Mazzilli, 2154</p>
+                    <p>Cristo, João Pessoa - PB</p>
+                </div>
+            </div>
+            
+            <!-- Unidade Bancários -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Bancários</h3>
+                <div class="unit-address">
+                    <p>Rua Walfredo Macedo Brandão, 997</p>
+                    <p>Jardim Cidade Universitária, João Pessoa - PB</p>
+                </div>
+            </div>
+            
+            <!-- Unidade Bessa -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Bessa</h3>
+                <div class="unit-address">
+                    <p>R. Fernando Luiz Henrique dos Santos, 1779</p>
+                    <p>Bessa, João Pessoa - PB</p>
+                </div>
+            </div>
+            
+            <!-- Unidade Mangabeira -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Mangabeira</h3>
+                <div class="unit-address">
+                    <p>Rua Josefa Taveira, 1429</p>
+                    <p>Mangabeira, João Pessoa - PB</p>
+                </div>
+            </div>
+            
+            <!-- Unidade Bessa II -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Bessa II</h3>
+                <div class="unit-address">
+                    <p>Rua Paulo Roberto de Souza Acioly, 142</p>
+                    <p>Bessa, João Pessoa - PB</p>
+                </div>
+            </div>
+            
+            <!-- Unidade Cruz das Armas -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Cruz das Armas</h3>
+                <div class="unit-address">
+                    <p>Avenida Cruz das Armas, 423</p>
+                    <p>Cruz das Armas, João Pessoa - PB</p>
+                </div>
+            </div>
+            
+            <!-- Unidade Manaíra -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Manaíra</h3>
+                <div class="unit-address">
+                    <p>Rua Reinaldo Tavares de Melo, 165</p>
+                    <p>Manaíra, João Pessoa - PB</p>
+                </div>
+            </div>
+            
+            <!-- Unidade Tambad -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Tambad</h3>
+                <div class="unit-address">
+                    <p>Rua Nossa Senhora dos Navegantes, 402</p>
+                    <p>Tambaú, João Pessoa - PB</p>
+                </div>
+            </div>
+            
+            <!-- Unidade Valentina -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Valentina</h3>
+                <div class="unit-address">
+                    <p>Rua Inspetora Emília Mendonça Gomes, 497</p>
+                    <p>Valentina de Figueiredo, João Pessoa - PB</p>
+                </div>
+            </div>
+            
+            <!-- Unidade Altipiano -->
+            <div class="unit-card">
+                <h3 class="unit-name">Unidade Altipiano</h3>
+                <div class="unit-address">
+                    <p>R. Josita Almeida, 240</p>
+                    <p>Altipiano, João Pessoa - PB</p>
+                </div>
+            </div>
+        </div>
+        
+        <a href="index.html" class="btn">← Voltar ao início</a>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil dos Clientes de Laboratórios</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdf3df;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #13131a;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            color: #d3ad7f;
+            margin-top: 40px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #d3ad7f;
+            padding-bottom: 10px;
+        }
+        
+        .chart-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 30px 0;
+        }
+        
+        .chart {
+            display: flex;
+            height: 300px;
+            align-items: flex-end;
+            justify-content: space-around;
+            margin-top: 40px;
+            position: relative;
+        }
+        
+        .bar {
+            width: 14%;
+            background: linear-gradient(to top, #d3ad7f, #e8c9a1);
+            border-radius: 5px 5px 0 0;
+            position: relative;
+            transition: height 0.5s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .bar-label {
+            position: absolute;
+            bottom: -30px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .percentage {
+            position: absolute;
+            top: -25px;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            color: #13131a;
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            gap: 15px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+        
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            background: linear-gradient(to right, #d3ad7f, #e8c9a1);
+            margin-right: 8px;
+            border-radius: 3px;
+        }
+        
+        .data-source {
+            font-size: 0.8rem;
+            color: #666;
+            text-align: right;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        
+        .profile-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .profile-title {
+            color: #d3ad7f;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .profile-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .highlight {
+            background-color: #f8e9d5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        .btn {
+            display: block;
+            text-align: center;
+            background: linear-gradient(135deg, var(--market-color), #e8c9a1);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.6rem;
+            margin: 3rem auto;
+            width: fit-content;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(210, 173, 127, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(135deg, #c59a6b, #d8b58b);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(210, 173, 127, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .chart {
+                flex-direction: column;
+                height: auto;
+                align-items: center;
+            }
+            
+            .bar {
+                width: 80%;
+                height: 40px !important;
+                margin-bottom: 30px;
+            }
+            
+            .bar-label, .percentage {
+                position: static;
+                text-align: center;
+                margin-top: 5px;
+            }
+        }
+        
+        :root {
+            --market-color: #d3ad7f;
+            --black: #13131a;
+            --bg: #fdf3df;
+        }
+    </style>
+</head>
+<body>
+    <h1>Perfil dos Clientes Frequentes <span>em Laboratórios no Brasil</span></h1>
+    
+    <div class="chart-container">
+        <h2>Distribuição Percentual por Grupo</h2>
+        
+        <div class="chart">
+            <div class="bar" style="height: 40%;">
+                <div class="percentage">40%</div>
+                <div class="bar-label">Idosos (60+)</div>
+            </div>
+            
+            <div class="bar" style="height: 35%;">
+                <div class="percentage">35%</div>
+                <div class="bar-label">Mulheres (25-50)</div>
+            </div>
+            
+            <div class="bar" style="height: 25%;">
+                <div class="percentage">25%</div>
+                <div class="bar-label">Homens (40+)</div>
+            </div>
+            
+            <div class="bar" style="height: 15%;">
+                <div class="percentage">15%</div>
+                <div class="bar-label">Atletas</div>
+            </div>
+            
+            <div class="bar" style="height: 12%;">
+                <div class="percentage">12%</div>
+                <div class="bar-label">Gestantes</div>
+            </div>
+            
+            <div class="bar" style="height: 33%;">
+                <div class="percentage">33%</div>
+                <div class="bar-label">Crônicos</div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color"></div>
+                <span>Percentual de exames realizados</span>
+            </div>
+        </div>
+        
+        <div class="data-source">
+            Fontes: Abramed (2023), SBPC/ML (2024), DataSUS (2024)
+        </div>
+    </div>
+
+    <div class="profile-section">
+        <div class="profile-title">1. Idosos (60+ anos) – O Público que Mais Precisa de Monitoramento</div>
+        <div class="profile-content">
+            <p>Com o envelhecimento, o risco de doenças crônicas (diabetes, hipertensão, problemas renais) aumenta significativamente. Além disso, muitos planos de saúde exigem check-ups anuais para manter a cobertura.</p>
+            
+            <p><strong>Principais exames e suas razões:</strong></p>
+            <p><span class="highlight">Hemograma completo</span>: Avalia anemia, infecções e saúde geral.</p>
+            <p><span class="highlight">Glicemia em jejum e hemoglobina glicada</span>: Controlam diabetes.</p>
+            <p><span class="highlight">Creatinina e ureia</span>: Monitoram a função renal.</p>
+            <p><span class="highlight">TSH e T4 livre</span>: Verificam o funcionamento da tireoide, comum em idosos.</p>
+            
+            <p><strong>Dado relevante:</strong> 40% dos exames laboratoriais no Brasil são realizados por essa faixa etária (Abramed, 2023).</p>
+        </div>
+    </div>
+
+    <div class="profile-section">
+        <div class="profile-title">2. Mulheres (25-50 anos) – Saúde Hormonal e Preventiva</div>
+        <div class="profile-content">
+            <p>A saúde da mulher exige acompanhamento contínuo, desde a vida fértil (anticoncepcionais, gravidez) até a menopausa. Além disso, a conscientização sobre prevenção de câncer ginecológico tem aumentado.</p>
+            
+            <p><strong>Principais exames e suas razões:</strong></p>
+            <p><span class="highlight">Papanicolau e HPV</span>: Previnem câncer de colo de útero.</p>
+            <p><span class="highlight">Dosagem hormonal (FSH, LH, estradiol)</span>: Avaliam fertilidade e menopausa.</p>
+            <p><span class="highlight">Vitamina D e ferro</span>: Comuns em mulheres com anemia ou deficiências nutricionais.</p>
+            
+            <p><strong>Dado relevante:</strong> 35% dos exames são realizados por mulheres em idade reprodutiva (SBPC/ML, 2024).</p>
+        </div>
+    </div>
+
+    <div class="profile-section">
+        <div class="profile-title">3. Homens (40+ anos) – Check-up Cardiovascular e Metabólico</div>
+        <div class="profile-content">
+            <p>Homens tradicionalmente procuram menos médicos, mas após essa idade, o risco de doenças cardíacas, diabetes e problemas de próstata aumenta. Muitos só vão ao laboratório por exigência médica ou do trabalho.</p>
+            
+            <p><strong>Principais exames e suas razões:</strong></p>
+            <p><span class="highlight">PSA</span>: Rastreamento de câncer de próstata.</p>
+            <p><span class="highlight">Perfil lipídico (colesterol, triglicerídeos)</span>: Avalia risco cardíaco.</p>
+            <p><span class="highlight">Testosterona livre</span>: Diagnostica andropausa (queda hormonal masculina).</p>
+            
+            <p><strong>Dado relevante:</strong> Homens acima de 40 anos representam 25% dos exames preventivos (DataSUS, 2024).</p>
+        </div>
+    </div>
+
+    <div class="profile-section">
+        <div class="profile-title">4. Atletas e Praticantes de Atividade Física – Monitoramento de Performance</div>
+        <div class="profile-content">
+            <p>A busca por saúde e performance esportiva levou atletas amadores e profissionais a monitorarem vitaminas, recuperação muscular e níveis hormonais.</p>
+            
+            <p><strong>Principais exames e suas razões:</strong></p>
+            <p><span class="highlight">CK (creatina quinase)</span>: Detecta lesões musculares.</p>
+            <p><span class="highlight">Ferro e ferritina</span>: Avaliam anemia em corredores.</p>
+            <p><span class="highlight">Cortisol salivar</span>: Mede estresse físico e overtraining.</p>
+            
+            <p><strong>Dado relevante:</strong> A demanda por exames ligados a esportes cresce 15% ao ano (LabData, 2024).</p>
+        </div>
+    </div>
+
+    <div class="profile-section">
+        <div class="profile-title">5. Gestantes – Acompanhamento Pré-Natal Obrigatório</div>
+        <div class="profile-content">
+            <p>A gravidez exige monitoramento constante da saúde da mãe e do bebê, com foco em detectar diabetes gestacional, infecções e deficiências nutricionais.</p>
+            
+            <p><strong>Principais exames e suas razões:</strong></p>
+            <p><span class="highlight">Beta-hCG</span>: Confirma gravidez.</p>
+            <p><span class="highlight">Glicemia e curva glicêmica</span>: Controlam diabetes gestacional.</p>
+            <p><span class="highlight">Toxoplasmose e rubéola</span>: Previnem complicações fetais.</p>
+            
+            <p><strong>Dado relevante:</strong> Gestantes realizam de 8 a 12 exames durante a gravidez (Ministério da Saúde, 2023).</p>
+        </div>
+    </div>
+
+    <div class="profile-section">
+        <div class="profile-title">6. Pacientes com Doenças Crônicas – Controle Contínuo</div>
+        <div class="profile-content">
+            <p>Diabetes, hipertensão e distúrbios da tireoide exigem monitoramento constante para ajuste de medicamentos e prevenção de complicações.</p>
+            
+            <p><strong>Principais exames e suas razões:</strong></p>
+            <p><span class="highlight">Hemoglobina glicada</span>: Avalia controle do diabetes.</p>
+            <p><span class="highlight">T3, T4 e TSH</span>: Monitoram hipo/hipertireoidismo.</p>
+            <p><span class="highlight">Eletrólitos (sódio, potássio)</span>: Importantes para hipertensos.</p>
+            
+            <p><strong>Dado relevante:</strong> 1 em cada 3 brasileiros tem alguma condição crônica que exige exames periódicos (IBGE, 2024).</p>
+        </div>
+    </div>
+
+    <div class="profile-section">
+        <div class="profile-title">Conclusão: Como Atender Melhor Cada Grupo?</div>
+        <div class="profile-content">
+            <p>Cada perfil tem necessidades específicas:</p>
+            <p><span class="highlight">Idosos</span>: Priorizar agendamento fácil e resultados claros.</p>
+            <p><span class="highlight">Mulheres</span>: Oferecer pacotes de check-up feminino.</p>
+            <p><span class="highlight">Homens</span>: Campanhas de conscientização sobre prevenção.</p>
+            <p><span class="highlight">Atletas</span>: Exames com foco em performance.</p>
+            <p><span class="highlight">Gestantes</span>: Atendimento prioritário e acolhedor.</p>
+            <p><span class="highlight">Crônicos</span>: Facilitar retirada de resultados online.</p>
+            
+            <p>Entender esses públicos permite criar <span class="highlight">serviços personalizados</span> e aumentar a fidelização.</p>
+        </div>
+    </div>
+
+    <a href="index.html" class="btn">← Voltar para Início</a>
+</body>
+</html>
