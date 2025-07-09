@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estratégia Pinterest Ads - Laboratório Roseane Dore</title>
+    <style>
+        :root {
+            --primary: #E60023; /* Vermelho Pinterest */
+            --secondary: #FFFFFF;
+            --accent: #0F172A;
+            --light: #F5F5F5;
+            --dark: #1E293B;
+            --text: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--secondary);
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border: 1px solid #E2E8F0;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .audience-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 1.8rem;
+            border-left: 5px solid var(--primary);
+        }
+
+        .pin-example {
+            background-color: #F8FAFC;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px dashed var(--primary);
+        }
+
+        .pin-visual {
+            width: 100%;
+            max-width: 400px;
+            height: 600px;
+            background-color: #E2E8F0;
+            margin: 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .kpi-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .kpi-table th, .kpi-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .kpi-table th {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .kpi-table tr:nth-child(even) {
+            background-color: #F8FAFC;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 3rem 0;
+        }
+
+        .timeline-item {
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+            border-left: 4px solid var(--primary);
+        }
+
+        .timeline-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background-color: #FFFBEB;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #F59E0B;
+            margin: 2rem 0;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Estratégia Pinterest Ads</h1>
+            <p>Laboratório Roseane Dore - Campanhas Visuais para Saúde Preventiva</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Público-Alvo Prioritário</h2>
+            <p>O Pinterest é ideal para alcançar mulheres que buscam informações sobre saúde e bem-estar, visto que 80% do público que usa pinterest se tratam de mulheres</p>
+            
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <h3>Mulheres (25-50 anos)</h3>
+                    <p><strong>Interesses:</strong> Saúde feminina, bem-estar, exames preventivos, atividade física</p>
+                    <p><strong>Abordagem do criativo:</strong> "A beleza do seu corpo está em cuidar dele" e iria descorrer sobre isso</p>
+                </div>
+                
+                <div class="audience-card">
+                    <h3>Gestantes</h3>
+                    <p><strong>Foco:</strong> Exames pré-natais e cuidados na gravidez</p>
+                    <p><strong>Abordagem:</strong> Conteúdo educativo sobre saúde materna, e o poder do monitoramento</p>
+                </div>
+                
+                
+            
+
+            <div class="highlight">
+                <h3>Segmentação Avançada</h3>
+                <ul>
+                    <li><strong>Palavras-chave:</strong> "saúde feminina", "exames preventivos", "gravidez saudável"</li>
+                    <li><strong>Interesses:</strong> Medicina preventiva, maternidade, fitness</li>
+                    
+                </ul>
+            </div>
+        </section>
+
+        <section class="card">
+        
+
+        <section class="card">
+            <h2>Copywriting e Mensagens-Chave</h2>
+            <p>Tonalidade: <strong>Acolhedora + Educativa</strong> (evitar tom médico assustador)</p>
+            
+            <div class="highlight">
+                <h3>Exemplos de Textos</h3>
+                <p><strong>Saúde feminina:</strong> "Cansaço, irritação ou queda de cabelo? Pode ser hormonal! No Roseane Dore, seus exames saem em 24h. Agende online!"</p>
+                <p><strong>Gestantes:</strong> "Seu bebê merece o melhor começo. Faça seu pré-natal com resultados rápidos e atendimento humanizado 💙"</p>
+                <p><strong>Idosos:</strong> "Check-up anual pode prevenir doenças silenciosas. Cuide de quem cuidou de você ❤️ Exames com desconto para +60 anos."</p>
+            </div>
+            
+            <h3>Hashtags Recomendadas</h3>
+            <p>#SaúdeFeminina #ExamesPreventivos #JoãoPessoa #RoseaneDore #CuidadoComAMulher</p>
+        </section>
+
+        <section class="card">
+            <h2>KPIs e Métricas de Sucesso</h2>
+            
+            <table class="kpi-table">
+                <thead>
+                    <tr>
+                        <th>Métrica</th>
+                        <th>Meta Ideal</th>
+                        <th>Como Medir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>CTR</strong></td>
+                        <td>≥ 1.5%</td>
+                        <td>Taxa de cliques nos Pins</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Salvamentos</strong></td>
+                        <td>≥ 5%</td>
+                        <td>Pins salvos no perfil</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CPC</strong></td>
+                        <td>≤ R$ 1.50</td>
+                        <td>Custo por clique para o site</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Conversões</strong></td>
+                        <td>≥ 1%</td>
+                        <td>Agendamentos via Pinterest</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ROAS</strong></td>
+                        <td>≥ 2x</td>
+                        <td>Retorno sobre exames agendados</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </section>
+
+        <section class="card">
+            <h2>Cronograma de Campanha</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <p><strong>Tipo de Pin:</strong> Infográfico</p>
+                    <p><strong>Objetivo:</strong> Conscientização sobre exames hormonais</p>
+                </div>
+                
+                <div class="timeline-item">
+                
+                    <p><strong>Tipo de Pin:</strong> Depoimento</p>
+                    <p><strong>Objetivo:</strong> Agendamentos para exames de gestantes</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <p><strong>Tipo de Pin:</strong> Criativo Estático simples</p>
+                    <p><strong>Objetivo:</strong> Conversão para exames de idosos</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+          
+            
+            <p>Essa estratégia posicionará o Roseane Dore como <strong>autoridade em saúde preventiva</strong>, gerando agendamentos a médio/longo prazo.</p>
+            
+            <a href="index.html" class="button">Ver Exemplos de Pins</a>
+        </section>
+    </main>
+</body>
+</html>

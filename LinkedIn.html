@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estratégia LinkedIn Ads | Laboratório Roseane Dore</title>
+    <style>
+        :root {
+            --primary: #0077B5; /* Azul LinkedIn */
+            --secondary: #313335;
+            --accent: #FFFFFF;
+            --light: #F5F5F5;
+            --dark: #000000;
+            --text: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--accent);
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+
+        .card {
+            background-color: var(--accent);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .audience-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .audience-card {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .audience-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filters-container {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .filter-item {
+            margin-bottom: 1rem;
+        }
+
+        .filter-title {
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .creative-example {
+            background-color: var(--light);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .creative-example strong {
+            color: var(--primary);
+            font-weight: normal;
+        }
+
+        .kpi-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .kpi-card {
+            background-color: var(--accent);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 4px solid var(--primary);
+        }
+
+        .kpi-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 0.5rem 0;
+        }
+
+        .conclusion {
+            background-color: var(--primary);
+            color: var(--accent);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--accent);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header id="top">
+        <div class="container">
+            <h1>Estratégia de LinkedIn Ads</h1>
+            <p>Laboratório Roseane Dore - Campanha B2B</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Público-Alvo Estratégico</h2>
+            <p>Segmentação profissional para alcançar os decisores corporativos em João Pessoa e região:</p>
+            
+            <div class="audience-container">
+                <div class="audience-card">
+                    <h3>RH e Gestores de Benefícios</h3>
+                    <p>Profissionais responsáveis por programas de saúde corporativa em empresas médias e grandes.</p>
+                </div>
+                
+                <div class="audience-card">
+                    <h3>Responsáveis por Convênios Médicos</h3>
+                    <p>Gerentes de operações em planos de saúde que buscam parcerias com laboratórios.</p>
+                </div>
+                
+                <div class="audience-card">
+                    <h3>Médicos do Trabalho e SESMT</h3>
+                    <p>Profissionais que indicam exames admissionais/demissionais e periódicos.</p>
+                </div>
+            </div>
+            
+            <div class="filters-container">
+                <h3>Filtros de Segmentação</h3>
+                <div class="filter-item">
+                    <div class="filter-title">Cargos:</div>
+                    <p>"Gerente de RH", "Coord. de Benefícios", "Gestor de Saúde Corporativa"</p>
+                </div>
+                <div class="filter-item">
+                    <div class="filter-title">Indústrias:</div>
+                    <p>"Recursos Humanos", "Saúde e Bem-Estar", "Serviços Médicos"</p>
+                </div>
+                <div class="filter-item">
+                    <div class="filter-title">Tamanho da Empresa:</div>
+                    <p>50+ funcionários (para justificar pacotes corporativos)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Abordagem de Criativos</h2>
+            <p>No LinkedIn, utilizaremos criativos profissionais e baseados em dados, com foco em valor empresarial:</p>
+            
+            <div class="creative-example">
+                <strong>Exemplo de anúncio carrossel:</strong><br>
+                "Reduza em até 27% os custos com saúde corporativa através de check-ups preventivos. Um estudo da ABRH mostra que empresas com programas de prevenção têm menor absenteísmo e maior produtividade. O Laboratório Roseane Dore oferece pacotes corporativos com descontos progressivos e laudos personalizados para sua gestão de saúde ocupacional."
+            </div>
+            
+            <div class="creative-example">
+                <strong>Exemplo de InMail:</strong><br>
+                "Prezado(a) [Nome],<br><br>
+                Sabia que 70% das empresas na Paraíba não otimizam seus programas de saúde ocupacional? O Laboratório Roseane Dore oferece soluções personalizadas para empresas com mais de 50 colaboradores, incluindo coleta no local e resultados em 24h. Solicite uma proposta sem compromisso e descubra como podemos reduzir seus custos com saúde enquanto aumenta a produtividade da sua equipe."
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>KPIs e Métricas de Sucesso</h2>
+            
+            <div class="kpi-container">
+                <div class="kpi-card">
+                    <h3>Taxa de Abertura de InMail</h3>
+                    <div class="kpi-value">≥ 40%</div>
+                    <p>Porcentagem de mensagens abertas pelos destinatários</p>
+                </div>
+                
+                <div class="kpi-card">
+                    <h3>Custo por Lead (CPL)</h3>
+                    <div class="kpi-value">R$ 80-150</div>
+                    <p>Justificado pelo alto valor dos contratos corporativos</p>
+                </div>
+                
+                <div class="kpi-card">
+                    <h3>Conversão em Propostas</h3>
+                    <div class="kpi-value">≥ 5%</div>
+                    <p>Porcentagem de leads que solicitam proposta comercial</p>
+                </div>
+            </div>
+            
+            <div class="conclusion">
+                <h3>Objetivo Principal</h3>
+                <p>Esta campanha no LinkedIn tem como foco estabelecer parcerias corporativas de alto valor, posicionando o Laboratório Roseane Dore como a melhor opção para saúde ocupacional e exames corporativos em João Pessoa e região.</p>
+            </div>
+        </section>
+
+        <div class="button-container">
+            <a href="index.html" class="back-to-top">Voltar ao Início</a>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estratégia Google Ads | Laboratório Roseane Dore</title>
+    <style>
+        :root {
+            --primary: #4285F4; /* Azul Google */
+            --secondary: #34A853; /* Verde Google */
+            --accent: #EA4335; /* Vermelho Google */
+            --light: #F8F9FA;
+            --dark: #202124;
+            --text: #3C4043;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            color: var(--dark);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .strategy-highlight {
+            background-color: #E8F0FE;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .keyword-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .keyword-pill {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .search-mockup {
+            background-color: white;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            padding: 0.5rem 1rem;
+            margin: 1rem 0;
+            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+            max-width: 600px;
+        }
+
+        .search-mockup .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-mockup .search-icon {
+            color: #9AA0A6;
+            margin-right: 0.5rem;
+        }
+
+        .search-mockup .search-text {
+            color: var(--text);
+        }
+
+        .kpi-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .kpi-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 4px solid var(--secondary);
+        }
+
+        .kpi-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 0.5rem 0;
+        }
+
+        .conclusion {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header id="top">
+        <div class="container">
+            <h1>Estratégia de Google Ads</h1>
+            <p>Laboratório Roseane Dore - Campanhas de Busca e Display</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Abordagem Estratégica</h2>
+            <p>Alocação de 30% do orçamento total para captação de demanda ativa através do Google Ads:</p>
+            
+            <div class="strategy-highlight">
+                <h3>Campanhas de Busca Local</h3>
+                <p>Foco em usuários que já estão procurando ativamente por exames laboratoriais na região de João Pessoa.</p>
+                
+                <div class="search-mockup">
+                    <div class="search-bar">
+                        <div class="search-icon">🔍</div>
+                        <div class="search-text">exame de sangue João Pessoa resultados rápidos</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Palavras-chave Prioritárias</h3>
+            <div class="keyword-container">
+                <div class="keyword-pill">exame de sangue João Pessoa</div>
+                <div class="keyword-pill">laboratório de imagem perto de mim</div>
+                <div class="keyword-pill">check-up completo preço</div>
+                <div class="keyword-pill">exame de urina rápido</div>
+                <div class="keyword-pill">laboratório análise clínica</div>
+                <div class="keyword-pill">exame TSH resultado rápido</div>
+                <div class="keyword-pill">preço hemograma completo</div>
+                <div class="keyword-pill">laboratório com coleta domiciliar</div>
+            </div>
+            
+            <h3>Extensões de Anúncio</h3>
+            <ul>
+                <li>Extensões de localização (mostrar endereços das unidades)</li>
+                <li>Extensões de chamada (botão "Ligar agora")</li>
+                <li>Extensões de preço (para pacotes promocionais)</li>
+                <li>Extensões de link (para agendamento online)</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>KPIs e Métricas de Sucesso</h2>
+            
+            <div class="kpi-container">
+                <div class="kpi-card">
+                    <h3>Taxa de Conversão</h3>
+                    <div class="kpi-value">≥ 7%</div>
+                    <p>Agendamentos gerados a partir dos cliques</p>
+                </div>
+                
+                <div class="kpi-card">
+                    <h3>CPC (Custo por Clique)</h3>
+                    <div class="kpi-value">R$ 0,5-1,00</div>
+                    <p>Para palavras-chave comerciais</p>
+                </div>
+                
+                <div class="kpi-card">
+                    <h3>Impressões Locais</h3>
+                    <div class="kpi-value">≥ 10.000/mês</div>
+                    <p>Para manter visibilidade</p>
+                </div>
+                
+                <div class="kpi-card">
+                    <h3>ROAS</h3>
+                    <div class="kpi-value">≥ 4x</div>
+                    <p>Retorno sobre check-ups e exames complexos</p>
+                </div>
+            </div>
+            
+            <div class="conclusion">
+                <h3>Objetivo Principal</h3>
+                <p>Captar usuários em momento de decisão (demanda ativa) que já estão procurando por serviços laboratoriais, convertendo essa intenção em agendamentos com alta taxa de conversão e excelente retorno sobre o investimento.</p>
+            </div>
+        </section>
+
+        <div class="button-container">
+            <a href="index.html" class="back-to-top">Voltar ao Início</a>
+        </div>
+    </main>
+</body>
+</html>
